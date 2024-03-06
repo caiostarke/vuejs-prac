@@ -1,26 +1,16 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<script setup>
+  import { ref, provide } from 'vue'
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+  import ChildComponent from './components/ChildComponent.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  const name = ref('Kaer')
+  provide('value', name)
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+
+  <input type="text" v-model="name">
+  <ChildComponent />
+
+</template>
