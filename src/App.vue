@@ -1,12 +1,10 @@
 <script setup>
-  import ChildStyle from './components/ChildStyle.vue'
+import DynamicComponent from './components/DynamicComponent.vue';
 
 </script>
 
 <template>
 
-  <h1> Hello from parent component</h1>
-
-  <ChildStyle  />
+  <DynamicComponent  />
 
 </template>
